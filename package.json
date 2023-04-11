@@ -1,0 +1,19 @@
+{
+  "name": "lolzspeak",
+  "version": "1.0.0",
+  "description": "Cool voice calls",
+  "main": "index.js",
+  "repository": "https://github.com/tori-getz/lolzspeak",
+  "author": "tori-getz",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^6.6.1"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "prettier:fix": "prettier --write ."
+  }
+}
