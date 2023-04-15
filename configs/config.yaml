@@ -1,0 +1,6 @@
+server:
+  name: Speaking Anime Server
+  port: 1337
+
+database:
+  path: /Users/torigetz/code/lolzspeak/database.db

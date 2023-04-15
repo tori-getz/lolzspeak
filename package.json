@@ -10,9 +10,10 @@
   "devDependencies": {
     "lerna": "^6.6.1"
   },
-  "workspaces": [
-    "apps/*"
-  ],
+  "workspaces": {
+    "packages": ["apps/*"],
+    "nohoist": ["**/electron"]
+  },
   "scripts": {
     "prettier:fix": "prettier --write ."
   }
