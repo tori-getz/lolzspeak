@@ -5,17 +5,9 @@ import logo from '~/resources/logo.svg';
 import styles from './create-acount.module.sass';
 import { Button } from '@mui/material';
 import { CreateUserModal } from '~/components/create-user-modal';
-import { useNavigate } from 'react-router-dom';
-import { ScreenNames } from '~/navigation';
 
 export const CreateAccountScreen: React.FC = () => {
   const [ modalVisible, setModalVisible ] = useState<boolean>(false);
-
-  const navigate = useNavigate();
-
-  const onSubmit = (_username: string) => {
-    navigate(ScreenNames.Home);
-  }
 
   return (
     <ScreenContainer
@@ -37,7 +29,6 @@ export const CreateAccountScreen: React.FC = () => {
       <CreateUserModal
         open={modalVisible}
         onClose={() => setModalVisible(false)}
-        onSubmit={onSubmit}
       />
     </ScreenContainer>
   )

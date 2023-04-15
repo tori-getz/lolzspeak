@@ -1,19 +1,28 @@
 import React, { useState } from 'react';
 import { Avatar, Box, Button, Modal, TextField } from '@mui/material';
 import { Done } from '@mui/icons-material';
+import { useService } from '~/hooks';
+import { useNavigate } from 'react-router-dom';
+import { ScreenNames } from '~/navigation';
 
 interface ICreateUserModal {
   open: boolean;
   onClose: () => any;
-  onSubmit: (username: string) => any;
 }
 
 export const CreateUserModal: React.FC<ICreateUserModal> = ({
   open,
-  onClose,
-  onSubmit,
+  onClose
 }) => {
   const [ username, setUsername ] = useState<string>('');
+
+  const { user } = useService();
+  const navigate = useNavigate();
+
+  const onSubmit = () => {
+    user.setUsername(username);
+    navigate(ScreenNames.Home);
+  }
 
   return (
     <Modal
@@ -57,7 +66,7 @@ export const CreateUserModal: React.FC<ICreateUserModal> = ({
             variant='outlined'
             startIcon={<Done />}
             disabled={!username}
-            onClick={() => onSubmit(username)}
+            onClick={onSubmit}
           >
             Save
           </Button>

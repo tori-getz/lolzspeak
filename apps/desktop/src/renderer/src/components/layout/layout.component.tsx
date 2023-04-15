@@ -16,7 +16,7 @@ export const Layout: React.FC<ILayout> = ({
   className
 }) => {
   return (
-    <div className={cn(className, styles.layout)}>
+    <div className={cn(styles.layout, className)}>
       <div
         className={styles.draggable}
       >

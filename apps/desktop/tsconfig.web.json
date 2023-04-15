@@ -7,10 +7,13 @@
     "src/preload/*.d.ts"
   ],
   "compilerOptions": {
+    "target": "ESNext",
     "composite": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "paths": {
       "~/*": ["./src/renderer/src/*"]
     }

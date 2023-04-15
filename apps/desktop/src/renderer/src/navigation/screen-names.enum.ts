@@ -1,4 +1,5 @@
 export enum ScreenNames {
-  CreateAccount = '/',
-  Home = '/home'
+  CreateAccount = '/create-account',
+  Home = '/',
+  Settings = '/settings',
 }

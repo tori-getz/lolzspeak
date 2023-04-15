@@ -1,6 +1,6 @@
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
 import react from '@vitejs/plugin-react'
-
+import babel from 'vite-plugin-babel';
 import * as path from 'node:path';
 
 export default defineConfig({
@@ -19,6 +19,14 @@ export default defineConfig({
         }
       ]
     },
-    plugins: [react()]
+    plugins: [
+      react({
+        babel: {
+          parserOpts: {
+            plugins: ['decorators-legacy', 'classProperties']
+          }
+        }
+      })
+    ]
   }
 })
