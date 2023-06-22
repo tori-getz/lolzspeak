@@ -1,4 +1,4 @@
-import { BrowserWindowConstructorOptions, app, shell, systemPreferences } from 'electron'
+import { BrowserWindowConstructorOptions, app, shell } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import { BrowserWindow } from 'glasstron-clarity';
